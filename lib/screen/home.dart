@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(
                                 builder: (BuildContext context) {
-                              return Detail(data: data.id);
+                              return Detail(data: data.id, title: data.title);
                             }));
                           },
                           child: Card(

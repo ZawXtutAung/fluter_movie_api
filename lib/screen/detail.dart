@@ -5,8 +5,9 @@ import 'package:flutter_movies/screen/loading.dart';
 import 'package:flutter_movies/service/api_service.dart';
 
 class Detail extends StatefulWidget {
-  Detail({Key? key, required this.data}) : super(key: key);
+  Detail({Key? key, required this.data, this.title}) : super(key: key);
   String? data;
+  String? title;
   @override
   State<Detail> createState() => _DetailState();
 }
@@ -21,7 +22,7 @@ class _DetailState extends State<Detail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.data!),
+        title: Text('${widget.title}'),
       ),
       body: FutureBuilder<MovieDetailModel>(
         future: details(),
